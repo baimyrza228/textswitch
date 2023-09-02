@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .con {
+            width: 300px;
+            background-color: blue;
+            padding:160px;
+            display: flexbox;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #text2 {
+            margin-right: 0px;
+            margin-left: 2px;
+        }
+
+        button {
+            color: red;
+            width: 300px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="con">
+        <input type="text" id="text1" value="first">
+        <input type="text" id="text2" value="second">
+        <button onclick="switchTExt()">Click me</button>
+    </div>    
+    <script>
+        const switchTExt = () => {
+            let text1 = document.getElementById('text1')
+            let text2 = document.getElementById('text2')
+
+            let firstText = text1.value
+            text1.value = text2.value
+            text2.value = firstText
+        }
+    </script>
+</body>
+</html>
